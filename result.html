@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Result</title>
+
+    <!-- INTERNAL CSS (as you requested) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 420px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2b4f81;
+            margin-bottom: 20px;
+        }
+
+        .result-card {
+            margin-top: 10px;
+            padding: 20px;
+            background: #f8fbff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .result-text {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .details p {
+            font-size: 18px;
+            margin: 8px 0;
+            color: #333;
+        }
+
+        .actions {
+            margin-top: 25px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #007bff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            color: white;
+            margin: 0 12px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="title">Diabetes Result</h2>
+
+    <div class="result-card">
+        <h3 class="result-text">{{ result }}</h3>
+
+        <div class="details">
+            <p><b>Glucose:</b> {{ glucose }}</p>
+            <p><b>Blood Pressure:</b> {{ bp }}</p>
+            <p><b>Insulin:</b> {{ insulin }}</p>
+            <p><b>BMI:</b> {{ bmi }}</p>
+        </div>
+    </div>
+
+    <div class="actions">
+        <a class="btn" href="/index">⬅ Back</a>
+        <a class="btn" href="/dashboard">📜 View History</a>
+    </div>
+
+</div>
+
+</body>
+</html>
